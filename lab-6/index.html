@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ITC505 – Lab 6: Task Time Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- ===== HEADER ===== -->
+    <header>
+      <h1>Task Time Analyzer</h1>
+      <p>Organize your tasks • Optimize your time</p>
+    </header>
+
+    <!-- ===== SIDEBAR ===== -->
+    <nav class="sidebar">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Schedule</a></li>
+        <li><a href="#">Progress</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+      <h2>Daily Task Tracker</h2>
+      <p>Enter a task name and the time (in minutes) you expect it to take.</p>
+
+      <form id="taskForm">
+        <label for="task">Task:</label>
+        <input type="text" id="task" placeholder="e.g. Study" required>
+
+        <label for="time">Duration (minutes):</label>
+        <input type="number" id="time" min="1" placeholder="e.g. 90" required>
+
+        <div class="btn-box">
+          <button type="submit">Add Task</button>
+          <button type="button" onclick="clearTasks()">Clear All</button>
+        </div>
+      </form>
+
+      <section id="taskList"></section>
+      <div id="result"></div>
+    </main>
+
+    <!-- ===== ADVERTISEMENT ===== -->
+    <aside class="ad">
+      <a href="https://www.amazon.com/OPNICE-Organizers-Accessories-Organizer-Workspace/dp/B0DB8F7GDN"
+         target="_blank" rel="noopener noreferrer">
+        <img src="https://m.media-amazon.com/images/I/81MeUftFm8L._AC_SX679_.jpg"
+             alt="Desk Organizer from Amazon">
+      </a>
+      <p>Keep your workspace neat — view this organizer on Amazon.</p>
+    </aside>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <p><strong>Addendum:</strong><br>
+        The Task Time Analyzer presents a unique implementation of the responsive Holy Grail Layout using CSS Grid. 
+        It distributes five flexible regions—header, navigation bar, main content, advertisement, and footer—across the viewport while maintaining adaptability for all screen sizes.  
+        The interactive JavaScript component enables real-time analysis of user-entered task durations.  
+        Each new entry updates the DOM dynamically to show a cumulative total, an average time, and automatically highlights the longest task.  
+        Implementing this required controlling the form’s default submit behavior with <code>preventDefault()</code>, 
+        storing task objects inside an array, and using functions such as <code>forEach()</code> and <code>reduce()</code>.  
+        During development, grid stretching issues were solved by applying <code>auto-fit</code> and 
+        <code>minmax()</code> values, ensuring fluid responsiveness.  
+        Input validation was refined to prevent negative or blank entries, 
+        and color transitions were added to improve user interaction feedback.  
+        Overall, this exercise enhanced my understanding of how structural layout, style uniformity, and client-side logic integrate to build user-driven web interfaces.
+      </p>
+
+      <p>Last updated: <span id="lastModified"></span></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
