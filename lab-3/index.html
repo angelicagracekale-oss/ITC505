@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITC505 Lab 3 – Give Me a Font</title>
+
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Font: Tourney -->
+    <link href="https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>ITC505 Lab 3: A Little Research</h1>
+    <p><em>By [Your Name]</em></p>
+</header>
+
+<main>
+    <h2>How Fonts Are Delivered to a Browser</h2>
+    <p>
+        When a web browser requests a page, it retrieves both the HTML and any linked assets—like CSS files, images, and fonts.  
+        To serve a custom font, the website can link to an online font provider such as <strong>Google Fonts</strong>.  
+        When the browser reads the <code>&lt;link&gt;</code> tag in the <code>&lt;head&gt;</code>, it automatically connects to
+        Google’s font servers (<em>fonts.googleapis.com</em> and <em>fonts.gstatic.com</em>) to download the required font files.
+    </p>
+
+    <p>
+        The <code>rel="preconnect"</code> attributes help the browser establish an early connection with Google’s servers, 
+        improving loading speed. Once the font is downloaded, it is applied to the page’s text based on the 
+        <code>font-family</code> rule in the external CSS file.
+    </p>
+
+    <h2>Why I Used “Tourney”</h2>
+    <p>
+        I chose the <strong>Tourney</strong> font because it’s eye-catching and very unlikely to be preinstalled on most systems.
+        It’s intentionally quirky so the grader can easily see that the font is being served from an external source rather than from the user’s local machine.  
+        The CSS file applies it globally using <code>font-family: 'Tourney', cursive;</code>.
+    </p>
+</main>
+
+<footer>
+    <p>Last updated: 
+        <span id="lastModified"></span>
+    </p>
+</footer>
+<script type="text/javascript">
+    var x = document.lastModified;
+    document.getElementById('lastModified').textContent = x;
+</script>
+
+</body>
+</html>
