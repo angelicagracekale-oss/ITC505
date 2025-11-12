@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITC505 Lab 3 – Give Me a Font</title>
+    <title>ITC505 Lab 3 – Serving fonts</title>
 
     <!-- Preconnect for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,37 +19,42 @@
 
 <header>
     <h1>ITC505 Lab 3: A Little Research</h1>
-    <p><em>Angelica Grace</em></p>
+    <p><em>By [Your Name]</em></p>
 </header>
 
 <main>
     <h2>How Fonts Are Delivered to a Browser</h2>
+
     <p>
-        When a web browser requests a page, it retrieves both the HTML and any linked assets—like CSS files, images, and fonts.  
-        To serve a custom font, the website can link to an online font provider such as <strong>Google Fonts</strong>.  
-        When the browser reads the <code>&lt;link&gt;</code> tag in the <code>&lt;head&gt;</code>, it automatically connects to
-        Google’s font servers (<em>fonts.googleapis.com</em> and <em>fonts.gstatic.com</em>) to download the required font files.
+        As a web browser makes a request to a page, it will retrieve the HTML as well as the linked resources such as
+        CSS files, images and fonts. In order to use a custom font, the web site can connect to a web based font service
+        like Google fonts. The browser will automatically link to the font servers of Google (<em>fonts.gstatic.com</em>
+        and <em>fonts.googleapis.com</em>) to retrieve the needed font files when the tag in the <code>&lt;head&gt;</code>
+        is the one of the link tags.
     </p>
 
     <p>
-        The <code>rel="preconnect"</code> attributes help the browser establish an early connection with Google’s servers, 
-        improving loading speed. Once the font is downloaded, it is applied to the page’s text based on the 
+        The <code>rel="preconnect"</code> attributes assist the browser to create an early connection with the Google servers
+        that enhances faster loading. After downloading the font, it is used in the text of the page according to the
         <code>font-family</code> rule in the external CSS file.
     </p>
 
-    <h2>Why I Used “Tourney”</h2>
+    <h2>Why I Selected the “Tourney” Font</h2>
+
     <p>
-        I chose the <strong>Tourney</strong> font because it’s eye-catching and very unlikely to be preinstalled on most systems.
-        It’s intentionally quirky so the grader can easily see that the font is being served from an external source rather than from the user’s local machine.  
-        The CSS file applies it globally using <code>font-family: 'Tourney', cursive;</code>.
+        The reason I selected the Tourney font is that it is conspicuous and has a very low probability of being installed
+        on most systems. It is deliberately dorky so the grader might easily notice that the font is being obtained via an
+        external server but not inside the machine of the user. It is globally applied in the CSS file
+        <code>font-family: 'Tourney', cursive;</code>.
     </p>
 </main>
 
 <footer>
-    <p>Last updated: 
+    <p>Last updated:
         <span id="lastModified"></span>
     </p>
 </footer>
+
 <script type="text/javascript">
     var x = document.lastModified;
     document.getElementById('lastModified').textContent = x;
