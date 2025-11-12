@@ -1,0 +1,45 @@
+
+body {
+    font-family: 'Tourney', cursive;
+    background-color: #fdf5f8;
+    color: #2b2b2b;
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 0 30px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #d89ac9;
+    padding-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.7em;
+    color: #702963;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+}
+
+h2 {
+    color: #8c3478;
+    margin-top: 30px;
+    font-size: 1.6em;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 15px;
+    font-size: 0.9em;
+    color: #555;
+    border-top: 1px solid #d6b3cd;
+}
