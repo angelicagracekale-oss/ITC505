@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lights Out – 5x5 Puzzle</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="main-title">Lights Out Puzzle</h1>
+        <p class="tagline">Click to toggle the lights — clear the board to win!</p>
+    </header>
+
+    <section class="controls">
+        <button id="shuffleBtn" class="btn">New Random Board</button>
+        <span id="message" class="message"></span>
+    </section>
+
+    <div id="board" class="board"></div>
+
+    <section class="addendum">
+        <h2>Project Addendum</h2>
+        <p>
+            For this project, I implemented a 5×5 version of the Lights Out puzzle. The HTML structure is kept minimal,
+            while the board itself is generated entirely through JavaScript to ensure flexibility. Each tile on the board
+            responds to user clicks by toggling itself and its four neighbors in accordance with the original puzzle rules.
+        </p>
+
+        <p>
+            To ensure that the board is always solvable, I began from an all-lit grid and applied a random series of
+            simulated tile presses. Since this mimics actual gameplay logic, any resulting configuration is reachable
+            through valid moves, making every starting position solvable. This was one of the most important logic
+            decisions in the project.
+        </p>
+
+        <p>
+            For visual flair, the title uses the colorful "Righteous" font, while the rest of the page uses "Space Mono,"
+            creating an intentional contrast to satisfy the project’s font requirement. A glowing box effect was added to
+            tiles to make the on/off states visually distinct.
+        </p>
+
+        <p>
+            A small challenge I faced was preventing the win message from triggering during shuffle. I solved this by giving
+            my toggle function a flag that disables win checking during automatic moves. This separation of "player move"
+            vs. "setup move" prevented false victory alerts.
+        </p>
+    </section>
+
+    <script src="lights.js"></script>
+
+    <!-- Required footer -->
+    <footer>
+        <p>Last updated: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+
+</body>
+</html>
